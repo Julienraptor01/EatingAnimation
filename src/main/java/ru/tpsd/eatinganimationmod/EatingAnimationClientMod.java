@@ -43,6 +43,8 @@ public class EatingAnimationClientMod implements ClientModInitializer {
 
         }
 
+        FabricLoader.getInstance().getModContainer("eatinganimationid").ifPresent(eatinganimation ->
+                ResourceManagerHelper.registerBuiltinResourcePack(EatingAnimationClientMod.locate("Eating Animation Smaller Utilities Compatibility"), eatinganimation, ResourcePackActivationType.DEFAULT_DISABLED));
     }
 
     public static Identifier locate(String path) {
